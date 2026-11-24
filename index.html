@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark"/>
 <link rel="icon" href="data:,"/>
 <title>JobCorner AI — Your corner for AI expert work</title>
-<meta name="description" content="JobCorner AI connects skilled professionals to remote AI expert contract opportunities on Mercor. Free to apply. We refer, Mercor hires."/>
+<meta name="description" content="JobCorner AI connects skilled professionals to remote AI expert contract opportunities, delivered through our partner AI research platform. Free to apply. We guide — our hiring partner hires and pays."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -21,31 +21,54 @@
 *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
 a{color:inherit} button,[role="button"]{min-height:44px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.05;letter-spacing:-.02em;margin:0}
-h1{font-size:clamp(2.4rem,6vw,4.2rem)} h2{font-size:clamp(1.9rem,4vw,2.8rem)} h3{font-size:1.15rem}
+h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(2.3rem,5.5vw,4rem)} h2{font-size:clamp(1.8rem,3.8vw,2.7rem)} h3{font-size:1.12rem}
+p{margin:0}
 /* Header */
-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:"Sora";font-weight:800;font-size:1.25rem}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 90%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:"Sora";font-weight:800;font-size:1.22rem;flex:0 0 auto}
 .logo-mark{width:44px;height:44px;flex:0 0 44px}
 .logo span em{font-style:normal;color:var(--teal)}
-.navlinks{display:flex;gap:26px;font-weight:600;font-size:.95rem}
-.navlinks a{text-decoration:none;color:var(--muted)} .navlinks a:hover{color:var(--ink)}
-.nav-cta{display:flex;gap:10px;align-items:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-size:.95rem;transition:.18s;background:var(--surface);color:var(--ink)}
+.navlinks{display:flex;gap:2px;font-weight:600;font-size:.9rem;align-items:center}
+.navlinks a{text-decoration:none;color:var(--muted);padding:9px 10px;border-radius:999px;white-space:nowrap}
+.navlinks a:hover{color:var(--ink);background:var(--surface)}
+.navlinks a.active{color:var(--teal-dark);background:var(--teal-soft)}
+@media(prefers-color-scheme:dark){.navlinks a.active{color:#5EEAD4}}
+.nav-cta{display:flex;gap:10px;align-items:center;flex:0 0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-size:.95rem;transition:.18s;background:var(--surface);color:var(--ink);font-family:inherit}
 .btn-teal{background:var(--teal);color:#fff;border-color:var(--teal)} .btn-teal:hover{background:var(--teal-dark)}
 .btn-outline{border-color:var(--line)} .btn-outline:hover{border-color:var(--teal);color:var(--teal)}
 .btn-navy{background:var(--navy);color:#fff} @media(prefers-color-scheme:dark){.btn-navy{background:#fff;color:#0B1530}}
 .btn-sm{padding:10px 16px;font-size:.9rem}
-@media(max-width:860px){.navlinks{display:none}}
-@media(max-width:600px){.nav{gap:10px}.logo{font-size:1.02rem;white-space:nowrap}.logo-mark{width:38px;height:38px;flex-basis:38px}.nav-cta .btn-outline{display:none}.nav-cta .btn{padding:10px 14px;font-size:.88rem;white-space:nowrap}}
+.menu-btn{display:none;width:44px;height:44px;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:1.25rem;color:var(--ink);flex:0 0 44px}
+.mobile-menu{display:none;border-top:1px solid var(--line);padding:10px 0 16px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:flex;align-items:center;min-height:48px;padding:6px 4px;text-decoration:none;font-weight:700;font-size:1.02rem;border-bottom:1px solid var(--line)}
+.mobile-menu a:last-of-type{border-bottom:none}
+.mobile-menu a.active{color:var(--teal-dark)}
+@media(prefers-color-scheme:dark){.mobile-menu a.active{color:#5EEAD4}}
+.mobile-menu .btn{width:100%;margin-top:12px}
+@media(max-width:1180px){.navlinks{display:none}.menu-btn{display:inline-flex}}
+@media(max-width:600px){.nav{gap:10px}.logo{font-size:1.02rem;white-space:nowrap}.logo-mark{width:38px;height:38px;flex-basis:38px}.nav-cta .btn{padding:10px 14px;font-size:.88rem;white-space:nowrap}}
+/* Pages */
+.page{display:none}
+.page.active{display:block}
+@media (prefers-reduced-motion: no-preference){.page.active{animation:pageIn .28s ease both}@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}
+/* Page head (subpages) */
+.page-head{background:var(--navy);color:#fff}
+.page-head-in{padding:52px 0 46px;max-width:780px}
+.page-head .crumb{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#8FE3D2;margin-bottom:14px}
+.page-head h1{font-size:clamp(2rem,4.6vw,3.2rem);color:#fff}
+.page-head p{color:#B9C6E2;font-size:1.08rem;margin-top:14px;max-width:40rem}
+.page-head .btn{margin-top:22px}
 /* Hero */
 .hero{padding:52px 0 28px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
 .eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--teal-soft);color:var(--teal-dark);font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
 @media(prefers-color-scheme:dark){.eyebrow{color:#5EEAD4}}
-.hero h1 span{color:var(--teal)} .hero h1 .u{box-shadow:inset 0 -.32em 0 var(--amber-soft); }
+.hero h1 span{color:var(--teal)} .hero h1 .u{box-shadow:inset 0 -.32em 0 var(--amber-soft)}
 .lede{font-size:1.13rem;color:var(--muted);max-width:34rem;margin:18px 0 24px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 .hero-notes{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:.88rem;font-weight:600;color:var(--muted)}
@@ -55,7 +78,7 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 
 .finder{background:var(--navy);color:#fff;border-radius:24px;padding:22px;box-shadow:var(--shadow)}
 .finder h3{color:#fff;font-size:1.05rem} .finder p{color:#B9C6E2;font-size:.9rem;margin:6px 0 14px}
 .finder label{font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#8FE3D2}
-.finder select{width:100%;margin-top:8px;padding:13px 14px;border-radius:12px;border:1px solid #2A3D6E;background:#13224A;color:#fff;font:inherit;font-weight:600}
+.finder select{width:100%;margin-top:8px;padding:13px 14px;border-radius:12px;border:1px solid #2A3D6E;background:#13224A;color:#fff;font:inherit;font-weight:600;min-height:48px}
 .finder-result{margin-top:14px;background:#fff;color:#0B1530;border-radius:14px;padding:14px 16px;display:none}
 .finder-result.show{display:block} .finder-result strong{display:block;font-family:"Sora"} .finder-result p{color:#5A6B86;margin:4px 0 10px;font-size:.92rem}
 .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
@@ -70,9 +93,12 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 
 .strip-in b{font-family:"Sora";display:block;font-size:1rem} .strip-in span{font-size:.85rem;color:var(--muted)}
 @media(max-width:700px){.strip-in{grid-template-columns:1fr 1fr}.strip-in div{border-top:1px solid var(--line)}}
 /* Sections */
-section{padding:64px 0 8px}
-.sec-head{max-width:720px;margin-bottom:26px} .sec-head p{color:var(--muted);font-size:1.05rem}
+section.block{padding:56px 0 8px}
+.sec-head{max-width:720px;margin-bottom:26px} .sec-head p{color:var(--muted);font-size:1.05rem;margin-top:10px}
 .kicker{color:var(--teal);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+.link-arrow{font-weight:700;color:var(--teal-dark);text-decoration:none}
+@media(prefers-color-scheme:dark){.link-arrow{color:#5EEAD4}}
+.link-arrow:hover{text-decoration:underline}
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:800px){.steps{grid-template-columns:1fr}}
@@ -80,10 +106,29 @@ section{padding:64px 0 8px}
 .step .num{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Sora";font-weight:800;margin-bottom:14px}
 @media(prefers-color-scheme:dark){.step .num{background:var(--teal)}}
 .step p{color:var(--muted);margin:8px 0 0}
+/* Cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.cards3{grid-template-columns:1fr 1fr}} @media(max-width:600px){.cards3{grid-template-columns:1fr}.cards2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card:hover{border-color:var(--teal);box-shadow:var(--shadow)}
+.card .ic{width:46px;height:46px;border-radius:13px;background:var(--teal-soft);display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px}
+.card p{color:var(--muted);margin:8px 0 0;font-size:.95rem}
+.card .go{margin-top:14px;display:inline-block}
+.card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.93rem;display:grid;gap:5px}
+/* Dual model band */
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.dual{grid-template-columns:1fr}}
+.dual-card{border-radius:26px;padding:30px;color:#fff}
+.dual-card.experts{background:var(--navy)} .dual-card.companies{background:var(--teal-dark)}
+.dual-card p{color:#D7E3F5;margin:10px 0 18px}
+.dual-card.companies p{color:#D9F3EC}
+.dual-card .kicker{color:#8FE3D2} .dual-card.companies .kicker{color:#BFF0E4}
+.dual-card .btn{background:#fff;color:var(--navy);border-color:#fff}
 /* Jobs */
 .jobs-tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
 .search{flex:1;min-width:220px;display:flex;align-items:center;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:4px 6px 4px 16px}
-.search input{flex:1;border:none;background:transparent;font:inherit;color:var(--ink);outline:none;min-height:40px}
+.search input{flex:1;border:none;background:transparent;font:inherit;color:var(--ink);outline:none;min-height:40px;min-width:0}
 .pills{display:flex;gap:8px;flex-wrap:wrap}
 .pill{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;font:inherit;font-size:.9rem}
 .pill.active{background:var(--navy);color:#fff;border-color:var(--navy)} @media(prefers-color-scheme:dark){.pill.active{background:var(--teal);border-color:var(--teal)}}
@@ -102,7 +147,6 @@ section{padding:64px 0 8px}
 .empty{display:none;background:var(--surface);border:1.5px dashed var(--line);border-radius:var(--radius);padding:28px;text-align:center;color:var(--muted)}
 .honest{margin-top:16px;background:var(--amber-soft);border-radius:14px;padding:14px 16px;font-size:.92rem;color:var(--ink)}
 .honest strong{font-family:"Sora"}
-
 /* Quiz + why */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:860px){.split{grid-template-columns:1fr}}
@@ -119,243 +163,667 @@ section{padding:64px 0 8px}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 @media(max-width:900px){.timeline{grid-template-columns:1fr 1fr}} @media(max-width:520px){.timeline{grid-template-columns:1fr}}
 .tl{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px} .tl small{color:var(--teal);font-weight:800;letter-spacing:.08em;text-transform:uppercase} .tl p{color:var(--muted);font-size:.93rem;margin:6px 0 0}
+/* About */
+.prose{max-width:760px}
+.prose p{color:var(--muted);font-size:1.05rem;margin-bottom:16px}
+.prose p strong{color:var(--ink)}
+.mission{background:var(--navy);color:#fff;border-radius:26px;padding:clamp(26px,4vw,44px)}
+.mission .kicker{color:#8FE3D2}
+.mission blockquote{margin:0;font-family:"Sora";font-size:clamp(1.35rem,3vw,2rem);line-height:1.3;letter-spacing:-.01em}
+.mission p{color:#B9C6E2;margin-top:14px;max-width:44rem}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.values{grid-template-columns:1fr 1fr}} @media(max-width:600px){.values{grid-template-columns:1fr}}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.compare{grid-template-columns:1fr}}
+.compare .col{border-radius:var(--radius);padding:26px;border:1px solid var(--line);background:var(--surface)}
+.compare .col.do{border-color:var(--teal)}
+.compare ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.compare li{display:flex;gap:10px;font-size:.96rem;color:var(--muted)}
+.compare li b{color:var(--ink)}
+.compare .mark{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:.75rem;font-weight:800;margin-top:2px}
+.mark-yes{background:var(--teal-soft);color:var(--teal-dark)}
+.mark-no{background:var(--amber-soft);color:#8A5D00}
+@media(prefers-color-scheme:dark){.mark-no{color:#FFD166}.mark-yes{color:#5EEAD4}}
 /* FAQ */
 .faq{max-width:820px}
 details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 20px;margin-bottom:10px}
 summary{cursor:pointer;font-weight:700;font-family:"Sora";padding:12px 0;min-height:44px;display:flex;align-items:center}
 details p{color:var(--muted);margin:0 0 16px}
+.faq-group{font-family:"Sora";font-size:1.05rem;margin:26px 0 12px}
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:start}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.contact-card p{color:var(--muted);margin:8px 0 0;font-size:.96rem}
+.email-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:14px}
+.email-row a{font-weight:800;font-size:1.05rem;text-decoration:none;word-break:break-all}
+.email-row a:hover{color:var(--teal-dark)}
+.topic-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.topic-list li{display:flex;gap:10px;color:var(--muted);font-size:.95rem}
+.topic-list li::before{content:"✓";color:var(--teal);font-weight:800}
 /* CTA */
 .cta{background:var(--navy);color:#fff;border-radius:26px;padding:clamp(28px,5vw,52px);display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin:56px 0}
 @media(max-width:800px){.cta{grid-template-columns:1fr}}
-.cta p{color:#B9C6E2} .cta-card{background:#13224A;border:1px solid #2A3D6E;border-radius:18px;padding:20px} .cta-card a{color:#5EEAD4;font-weight:700}
-footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.9rem}
+.cta p{color:#B9C6E2;margin-top:10px} .cta-card{background:#13224A;border:1px solid #2A3D6E;border-radius:18px;padding:20px} .cta-card a{color:#5EEAD4;font-weight:700}
+footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.9rem;margin-top:56px}
 .foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-footer a{font-weight:600}
-.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:99}
+footer a{font-weight:600;text-decoration:none}
+footer a:hover{color:var(--teal-dark)}
+.foot-col{display:grid;gap:6px;align-content:start}
+.foot-col b{color:var(--ink);margin-bottom:4px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:92vw;text-align:center}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-  <a class="logo" href="#top" aria-label="JobCorner AI home">
-    <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0B1530"/><path d="M14 34V14h9" stroke="#0EA68C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 14h-8M34 34h-8" stroke="#FFB020" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="24" r="3.2" fill="#fff"/></svg>
-    <span>JobCorner <em>AI</em></span>
-  </a>
-  <nav class="navlinks" aria-label="Main">
-    <a href="#opportunities">Opportunities</a><a href="#how">How it works</a><a href="#matcher">Role matcher</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+<header><div class="wrap">
+  <div class="nav">
+    <a class="logo" href="#home" data-nav="home" aria-label="JobCorner AI home">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0B1530"/><path d="M14 34V14h9" stroke="#0EA68C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 14h-8M34 34h-8" stroke="#FFB020" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="24" r="3.2" fill="#fff"/></svg>
+      <span>JobCorner <em>AI</em></span>
+    </a>
+    <nav class="navlinks" aria-label="Main">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About Us</a>
+      <a href="#opportunities" data-nav="opportunities">Opportunities</a>
+      <a href="#how" data-nav="how">How It Works</a>
+      <a href="#experts" data-nav="experts">For Experts</a>
+      <a href="#faq" data-nav="faq">FAQ</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-teal btn-sm" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#about" data-nav="about">About Us</a>
+    <a href="#opportunities" data-nav="opportunities">Opportunities</a>
+    <a href="#how" data-nav="how">How It Works</a>
+    <a href="#experts" data-nav="experts">For Experts</a>
+    <a href="#faq" data-nav="faq">FAQ</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+    <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
   </nav>
-  <div class="nav-cta"><a class="btn btn-outline btn-sm" href="#opportunities">Browse roles</a><a class="btn btn-teal btn-sm" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a></div>
 </div></header>
 
 <main id="top">
-<!-- HERO -->
-<div class="wrap hero"><div class="hero-grid">
-  <div>
-    <span class="eyebrow">● Remote AI work · Free to apply</span>
-    <h1 style="margin-top:16px">Your expertise belongs in <span>the future of AI.</span> <span class="u">Start at your corner.</span></h1>
-    <p class="lede">JobCorner AI is the front door for professionals — linguists, coders, doctors, lawyers, analysts and sharp generalists — who want flexible, remote contract work training and evaluating AI. We curate the paths. You apply on Mercor, the hiring platform.</p>
-    <div class="hero-actions"><a class="btn btn-teal" href="#opportunities">Explore opportunities ↓</a><a class="btn btn-outline" href="#matcher">Find my role →</a></div>
-    <div class="hero-notes"><span>Always free to apply</span><span>No fee, ever</span><span>We refer — Mercor hires</span></div>
-  </div>
-  <div class="hero-visual">
-    <div class="finder">
-      <h3>⚡ 30-second opportunity finder</h3>
-      <p>Tell us your strongest skill and instantly see the best-fit category — no sign-up, no form.</p>
-      <label for="skillSel">My strongest skill is…</label>
-      <select id="skillSel">
-        <option value="">Choose one…</option>
-        <option value="language">Languages, translation &amp; linguistics</option>
-        <option value="coding">Coding, data &amp; STEM</option>
-        <option value="domain">Medicine, law, finance or another profession</option>
-        <option value="general">Writing, reasoning &amp; attention to detail</option>
-      </select>
-      <div class="finder-result" id="finderResult" aria-live="polite"></div>
+
+<!-- ============================ HOME ============================ -->
+<div class="page" data-page="home">
+  <div class="wrap hero"><div class="hero-grid">
+    <div>
+      <span class="eyebrow">● Remote AI work · Free to apply</span>
+      <h1 style="margin-top:16px">Your expertise belongs in <span>the future of AI.</span> <span class="u">Start at your corner.</span></h1>
+      <p class="lede">JobCorner AI is the front door for professionals — linguists, coders, doctors, lawyers, analysts and sharp generalists — who want flexible, remote contract work training and evaluating AI. We curate the paths and prepare you for every step. You apply through our partner AI research platform — our hiring partner handles contracts, onboarding and payment.</p>
+      <div class="hero-actions"><a class="btn btn-teal" href="#opportunities">Explore opportunities ↓</a><a class="btn btn-outline" href="#how">How it works →</a></div>
+      <div class="hero-notes"><span>Always free to apply</span><span>No fee, ever</span><span>We guide — our hiring partner hires</span></div>
     </div>
-    <div class="mini-grid">
-      <div class="mini"><b>🗣 Language Experts</b><span>Native-level fluency is a superpower in AI training.</span><span class="tag">Explore on Mercor</span></div>
-      <div class="mini"><b>💻 Coding &amp; STEM</b><span>Review code, solve problems, stress-test reasoning.</span><span class="tag">See live roles</span></div>
+    <div class="hero-visual">
+      <div class="finder">
+        <h3>⚡ 30-second opportunity finder</h3>
+        <p>Tell us your strongest skill and instantly see the best-fit category — no sign-up, no form.</p>
+        <label for="skillSel">My strongest skill is…</label>
+        <select id="skillSel">
+          <option value="">Choose one…</option>
+          <option value="language">Languages, translation &amp; linguistics</option>
+          <option value="coding">Coding, data &amp; STEM</option>
+          <option value="domain">Medicine, law, finance or another profession</option>
+          <option value="general">Writing, reasoning &amp; attention to detail</option>
+        </select>
+        <div class="finder-result" id="finderResult" aria-live="polite"></div>
+      </div>
+      <div class="mini-grid">
+        <div class="mini"><b>🗣 Language Experts</b><span>Native-level fluency is a superpower in AI training.</span><span class="tag">Explore roles</span></div>
+        <div class="mini"><b>💻 Coding &amp; STEM</b><span>Review code, solve problems, stress-test reasoning.</span><span class="tag">See live roles</span></div>
+      </div>
     </div>
-  </div>
-</div></div>
+  </div></div>
 
-<div class="strip"><div class="wrap strip-in">
-  <div><b>Remote categories</b><span>Check each Mercor role for eligibility</span></div>
-  <div><b>Free to apply</b><span>No charges at any step</span></div>
-  <div><b>Contract work</b><span>Terms set by each live role</span></div>
-  <div><b>Direct to Mercor</b><span>Applications live on the platform</span></div>
-</div></div>
+  <div class="strip"><div class="wrap strip-in">
+    <div><b>Remote categories</b><span>Check each live role for eligibility</span></div>
+    <div><b>Free to apply</b><span>No charges at any step</span></div>
+    <div><b>Contract work</b><span>Terms set by each live role</span></div>
+    <div><b>One application</b><span>Roles delivered through our partner platform</span></div>
+  </div></div>
 
-<!-- HOW -->
-<section id="how"><div class="wrap">
-  <div class="sec-head"><div class="kicker">How it works</div><h2>Three steps. No middleman holding your application.</h2><p>JobCorner AI never collects your resume or application. We point you to the right door — Mercor handles everything after that.</p></div>
-  <div class="steps">
-    <div class="step"><div class="num">1</div><h3>Pick your corner</h3><p>Browse the opportunity categories below or use the role matcher. Each one maps to real expert work on Mercor.</p></div>
-    <div class="step"><div class="num">2</div><h3>Apply on Mercor</h3><p>Every Apply button opens Mercor in a new tab. Create your profile there, complete their AI interview and assessments.</p></div>
-    <div class="step"><div class="num">3</div><h3>Get matched by the platform</h3><p>Mercor reviews and matches experts to projects. Selection is by the platform and isn't guaranteed — strong, complete profiles do best.</p></div>
-  </div>
-</div></section>
-
-<!-- OPPORTUNITIES -->
-<section id="opportunities"><div class="wrap">
-  <div class="sec-head"><div class="kicker">Opportunities · via Mercor</div><h2>Find your role in the AI economy.</h2><p>These are opportunity <strong>categories</strong>, not individual postings. Click Apply on any card to see the exact live roles on Mercor and apply there.</p></div>
-
-  <div class="jobs-tools">
-    <div class="search">🔎 <input id="jobSearch" type="search" placeholder="Search categories — try “language”, “code”, “legal”…" aria-label="Search opportunity categories"/></div>
-  </div>
-  <div class="pills" role="group" aria-label="Filter categories" style="margin-bottom:18px">
-    <button class="pill active" data-filter="all">All categories</button>
-    <button class="pill" data-filter="language">Language</button>
-    <button class="pill" data-filter="coding">Coding &amp; STEM</button>
-    <button class="pill" data-filter="domain">Domain experts</button>
-    <button class="pill" data-filter="general">Generalists</button>
-  </div>
-
-  <div class="jobs-grid" id="jobsGrid">
-    <article class="job" data-cat="language" data-search="language linguistics translation native telugu hindi spanish french german arabic localization grammar">
-      <div class="job-top"><div class="job-icon">🗣️</div><span class="cat">Language</span></div>
-      <h3>Language &amp; Linguistics Experts</h3>
-      <p>Use native-level fluency to train and evaluate AI in your language — checking grammar, tone, translation quality and cultural nuance.</p>
-      <ul><li>Best for: native speakers, translators, language teachers, editors</li><li>Typical work: rating responses, fixing translations, voice &amp; text evaluation</li></ul>
-      <div class="meta"><span>Remote category</span><span>Contract</span><span>Many languages</span></div>
-      <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a>
-    </article>
-
-    <article class="job" data-cat="coding" data-search="coding stem software engineer developer python data science math physics engineering code review">
-      <div class="job-top"><div class="job-icon">💻</div><span class="cat">Coding &amp; STEM</span></div>
-      <h3>Coding &amp; STEM Experts</h3>
-      <p>Put technical depth to work: write and review code, solve hard STEM problems, and teach models to reason like an engineer.</p>
-      <ul><li>Best for: developers, data scientists, engineers, STEM researchers</li><li>Typical work: code evaluation, problem-solving, technical Q&amp;A</li></ul>
-      <div class="meta"><span>Remote category</span><span>Contract</span><span>Flexible hours</span></div>
-      <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a>
-    </article>
-
-    <article class="job" data-cat="domain" data-search="medical doctor nurse legal lawyer finance accounting domain expert healthcare law professional">
-      <div class="job-top"><div class="job-icon">🎓</div><span class="cat">Domain experts</span></div>
-      <h3>Medical, Legal &amp; Finance Experts</h3>
-      <p>Frontier AI needs real professional judgement. Lend yours — reviewing specialised answers where accuracy genuinely matters.</p>
-      <ul><li>Best for: clinicians, lawyers, accountants, finance &amp; other licensed professionals</li><li>Typical work: expert review, case reasoning, accuracy checks</li></ul>
-      <div class="meta"><span>Remote category</span><span>Contract</span><span>Credentials valued</span></div>
-      <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a>
-    </article>
-
-    <article class="job" data-cat="general" data-search="generalist ai training evaluation writing reasoning annotation quality rlhf beginner detail">
-      <div class="job-top"><div class="job-icon">✦</div><span class="cat">Generalists</span></div>
-      <h3>AI Training &amp; Evaluation Generalists</h3>
-      <p>The most accessible way in. Rate and compare AI responses, follow clear rubrics, and help models become more accurate and helpful.</p>
-      <ul><li>Best for: strong writers, detail-obsessed readers, career-switchers</li><li>Typical work: response rating, preference ranking, quality checks</li></ul>
-      <div class="meta"><span>Remote category</span><span>Contract</span><span>Great first step</span></div>
-      <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a>
-    </article>
-
-    <article class="job" data-cat="general" data-search="writing creative content editor copywriter research humanities history literature">
-      <div class="job-top"><div class="job-icon">✍️</div><span class="cat">Generalists</span></div>
-      <h3>Writing, Research &amp; Humanities Experts</h3>
-      <p>Writers and researchers shape how AI writes and reasons — drafting gold-standard answers and judging quality, style and facts.</p>
-      <ul><li>Best for: writers, editors, academics, researchers</li><li>Typical work: long-form evaluation, fact-checking, style judgement</li></ul>
-      <div class="meta"><span>Remote category</span><span>Contract</span><span>Portfolio helps</span></div>
-      <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a>
-    </article>
-
-    <article class="job" data-cat="coding" data-search="data annotation labeling analysis spreadsheet research operations qa quality assurance">
-      <div class="job-top"><div class="job-icon">◎</div><span class="cat">Coding &amp; STEM</span></div>
-      <h3>Data, Research &amp; QA Contributors</h3>
-      <p>Structured, careful work that makes datasets trustworthy — annotation, verification and analysis for teams building AI.</p>
-      <ul><li>Best for: analysts, QA specialists, research assistants</li><li>Typical work: data labelling, verification, structured review</li></ul>
-      <div class="meta"><span>Remote category</span><span>Contract</span><span>Detail-driven</span></div>
-      <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a>
-    </article>
-  </div>
-  <div class="empty" id="jobsEmpty">No categories match that search. <button class="btn btn-outline btn-sm" id="resetJobs" style="margin-left:8px">Reset filters</button></div>
-
-  <div class="honest"><strong>Straight talk:</strong> Applying is always free. JobCorner AI is a referral guide — we don't hire, we don't collect applications, and we can't guarantee selection. Mercor runs the interviews, assessments, matching, contracts and pay. Exact roles, requirements and rates are shown on Mercor at the time you apply.</div>
-</div></section>
-
-<!-- MATCHER + WHY -->
-<section id="matcher"><div class="wrap">
-  <div class="sec-head"><div class="kicker">Role matcher</div><h2>Not sure where you fit? Answer 3 questions.</h2></div>
-  <div class="split">
-    <div class="panel">
-      <h3>Find my category</h3>
-      <div class="quiz-q"><b>1 · What best describes your background?</b><div class="quiz-opts" data-q="bg">
-        <button data-v="language">Languages</button><button data-v="coding">Tech / STEM</button><button data-v="domain">A profession (med / law / finance…)</button><button data-v="general">General / other</button></div></div>
-      <div class="quiz-q"><b>2 · What work sounds most like you?</b><div class="quiz-opts" data-q="work">
-        <button data-v="language">Judging words &amp; translation</button><button data-v="coding">Solving &amp; building</button><button data-v="domain">Expert judgement calls</button><button data-v="general">Rating &amp; comparing answers</button></div></div>
-      <div class="quiz-q"><b>3 · Your strongest asset?</b><div class="quiz-opts" data-q="asset">
-        <button data-v="language">Native fluency</button><button data-v="coding">Technical depth</button><button data-v="domain">Credentials &amp; experience</button><button data-v="general">Sharp eye for detail</button></div></div>
-      <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">What we do</div><h2>A talent studio for the AI expert economy.</h2><p>AI companies need human experts — people who can judge language, code, medicine, law and reasoning better than any model can judge itself. JobCorner AI helps those experts find the right door, understand the work, and apply with confidence.</p></div>
+    <div class="cards3">
+      <div class="card"><div class="ic">🧭</div><h3>We curate the paths</h3><p>Six clear opportunity categories, explained in plain language — what the work is, who it suits, and what the application will ask for.</p><a class="go link-arrow" href="#opportunities">Browse opportunities →</a></div>
+      <div class="card"><div class="ic">📖</div><h3>We explain the process</h3><p>No surprises: how the application process works: profile, AI interview, assessments and matching, step by step.</p><a class="go link-arrow" href="#how">See how it works →</a></div>
+      <div class="card"><div class="ic">🤝</div><h3>We stay out of the way</h3><p>We never collect your resume or application, and we never sit between you and your pay. You apply directly through the partner platform.</p><a class="go link-arrow" href="#about">More about us →</a></div>
     </div>
-    <div class="panel">
-      <h3>Why start at JobCorner AI?</h3>
-      <ul class="why-list">
-        <li><span class="ic">🧭</span><div><b>Clarity before you apply</b><p>Know which category fits, what the work actually involves, and what Mercor will ask for — before you spend an hour on a profile.</p></div></li>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">How it works</div><h2>Three steps. No middleman holding your application.</h2></div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Pick your corner</h3><p>Browse the opportunity categories or use the role matcher. Each one maps to real expert work through our partner platform.</p></div>
+      <div class="step"><div class="num">2</div><h3>Apply through our partner</h3><p>Every Apply button opens our partner AI research platform in a new tab. Create your profile there, complete the AI interview and assessments.</p></div>
+      <div class="step"><div class="num">3</div><h3>Get matched by the platform</h3><p>Our hiring partner reviews profiles and matches experts to projects. Selection is made by the hiring partner and isn't guaranteed — strong, complete profiles do best.</p></div>
+    </div>
+    <p style="margin-top:18px"><a class="link-arrow" href="#how">Read the full step-by-step guide →</a></p>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Popular categories</div><h2>Where experts start.</h2><p>A preview of the board — the full list, search and filters live on the Opportunities page.</p></div>
+    <div class="cards3">
+      <div class="card"><div class="ic">🗣️</div><h3>Language &amp; Linguistics Experts</h3><p>Native-level fluency put to work: grammar, tone, translation quality and cultural nuance for AI in your language.</p><a class="go link-arrow" href="#opportunities">View category →</a></div>
+      <div class="card"><div class="ic">💻</div><h3>Coding &amp; STEM Experts</h3><p>Write and review code, solve hard STEM problems, and teach models to reason like an engineer.</p><a class="go link-arrow" href="#opportunities">View category →</a></div>
+      <div class="card"><div class="ic">✦</div><h3>AI Training Generalists</h3><p>The most accessible way in: rate and compare AI responses against clear rubrics and help models improve.</p><a class="go link-arrow" href="#opportunities">View category →</a></div>
+    </div>
+  </div></section>
+
+  <div class="wrap"><div class="cta">
+    <div><div class="kicker" style="color:#5EEAD4">Your corner is waiting</div><h2>One click takes you to the real applications.</h2><p>Browse the categories, pick your best fit, and apply through our partner platform. It costs nothing to try — and your expertise might be exactly what the next model needs.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a><a class="btn" href="#opportunities" style="background:transparent;color:#fff;border-color:#3B548F">Browse categories</a></div></div>
+    <div class="cta-card"><h3 style="color:#fff">New here?</h3><p style="margin:8px 0 14px">Start with the About page — who we are, what we do, and exactly where our role ends and our hiring partner's begins.</p><a href="#about">About JobCorner AI →</a></div>
+  </div></div>
+</div>
+
+<!-- ============================ ABOUT ============================ -->
+<div class="page" data-page="about">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">About Us</div>
+    <h1>The corner where human expertise meets AI.</h1>
+    <p>JobCorner AI is a talent studio built for the expert economy: we connect skilled professionals with remote AI-training contract work, delivered through our partner AI research platform.</p>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="mission">
+      <div class="kicker">Our mission</div>
+      <blockquote>“To make human expertise the easiest thing in the world for AI to learn from — and the easiest work in the world for experts to find.”</blockquote>
+      <p>Every breakthrough model is trained, tested and corrected by people: the linguist who hears the wrong tone, the engineer who spots the subtle bug, the clinician who knows the dangerous answer from the safe one. Our mission is to shorten the distance between those people and the teams who need them.</p>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Who we are</div><h2>A new studio, built deliberately for this moment.</h2></div>
+    <div class="prose">
+      <p><strong>JobCorner AI is a new talent and referral studio</strong> — created because the way AI gets built has changed, and the way experts find that work hasn't kept up. Frontier AI labs now rely on human judgement at enormous scale: native speakers who can evaluate a model in their own language, developers who can grade its code, doctors, lawyers and analysts who can tell a confident answer from a correct one. Our partner AI research platform hires those experts for remote contract projects. The demand is real, the work is meaningful — but for most professionals, the path in is genuinely unclear.</p>
+      <p>Which category fits me? What does the work actually involve day to day? What happens after I apply — and who decides? Those questions are where talented people stall, and they're exactly the questions JobCorner AI exists to answer. We organise the opportunity landscape in plain language, prepare experts for each step of the platform process, and send them through the right door with their eyes open.</p>
+      <p>Everything we publish is written to be used: what each category of work involves day to day, who it suits, what the application process asks of you, and what a strong profile looks like. No hype, no inflated promises — just a clear, honest map of a genuinely new kind of work, drawn by a studio that studies this market every day.</p>
+      <p>We are deliberately independent. We are not an employer of the experts we guide, and we don't pretend to be a giant agency with a decade of invented history. We are a focused, modern studio that would rather be precise about what it does than impressive about what it doesn't. That honesty is not a limitation — it's the product.</p>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">What we do</div><h2>Guidance and referral, done properly.</h2></div>
+    <div class="cards2">
+      <div class="card"><div class="ic">🧑‍💼</div><h3>For experts: guidance &amp; referral</h3><p>We help professionals discover and enter AI expert work through our partner AI research platform:</p><ul>
+        <li>Six curated opportunity categories, explained in plain language</li>
+        <li>A role matcher that maps your background to your best-fit category</li>
+        <li>Step-by-step preparation for the partner platform's profile, AI interview and assessments</li>
+        <li>Free answers by email when you're unsure where you fit</li>
+      </ul><a class="go link-arrow" href="#experts">More for experts →</a></div>
+      <div class="card"><div class="ic">📖</div><h3>Preparation, not just links</h3><p>Knowing the process before you start is half the advantage. We give you:</p><ul>
+        <li>A role matcher that maps your background to a best-fit category</li>
+        <li>A step-by-step guide to the application, interview and assessments</li>
+        <li>Guidance on what a strong, specific profile looks like</li>
+        <li>Honest caveats about selection — no guaranteed placements, ever</li>
+      </ul><a class="go link-arrow" href="#how">See how it works →</a></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">How we work</div><h2>Considered, transparent, and human.</h2><p>From your first visit to your first project, the experience is the same: no pressure, no jargon, and no surprises about who does what.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>We listen first</h3><p>Everything starts with understanding — your expertise, your background and the kind of work you're looking for. Good matching is impossible without it.</p></div>
+      <div class="step"><div class="num">2</div><h3>We map the fit</h3><p>We translate needs into clear categories and profiles: which expertise, at what depth, judged against what standard. You get a best-fit category and a concrete plan for applying well.</p></div>
+      <div class="step"><div class="num">3</div><h3>We make the introduction</h3><p>You apply directly through our partner platform — nothing sits with us. And if a question comes up along the way, we're one email away.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">The clear line</div><h2>What we do — and what we don't.</h2><p>Trust in this industry runs on precision about roles, so we state ours plainly.</p></div>
+    <div class="compare">
+      <div class="col do"><h3>✓ JobCorner AI does</h3><ul>
+        <li><span class="mark mark-yes">✓</span><span><b>Guide and refer experts.</b> Curated categories, honest preparation, direct links to the partner platform.</span></li>
+        <li><span class="mark mark-yes">✓</span><span><b>Prepare you.</b> We explain the partner platform's interview and assessment steps before you start.</span></li>
+        <li><span class="mark mark-yes">✓</span><span><b>Answer questions.</b> Guidance by email is free for experts — info@jobcornerai.com.</span></li>
+        <li><span class="mark mark-yes">✓</span><span><b>Charge experts nothing.</b> Applying through our links is always free.</span></li>
+      </ul></div>
+      <div class="col"><h3>✕ JobCorner AI does not</h3><ul>
+        <li><span class="mark mark-no">✕</span><span><b>Hire experts.</b> Our hiring partner reviews applications and makes every selection decision.</span></li>
+        <li><span class="mark mark-no">✕</span><span><b>Pay experts.</b> Contracts and payments for platform work are between the expert and our hiring partner, always.</span></li>
+        <li><span class="mark mark-no">✕</span><span><b>Collect applications.</b> No resume uploads, no application forms, no candidate database on this site.</span></li>
+        <li><span class="mark mark-no">✕</span><span><b>Guarantee outcomes.</b> Selection depends on profile, assessments and live project demand.</span></li>
+      </ul></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">What experts can expect</div><h2>Working with us, from first click to first project.</h2></div>
+    <div class="timeline">
+      <div class="tl"><small>Expect</small><h3 style="margin-top:6px">Clarity</h3><p>Plain-language categories, real descriptions of the work, and honest caveats — before you invest an hour in a profile.</p></div>
+      <div class="tl"><small>Expect</small><h3 style="margin-top:6px">Preparation</h3><p>A clear picture of the partner platform's interview and assessment steps, and what a strong, specific profile looks like.</p></div>
+      <div class="tl"><small>Expect</small><h3 style="margin-top:6px">Directness</h3><p>One link, straight to the platform. No forms here, no data collected here, no one sitting between you and your pay.</p></div>
+      <div class="tl"><small>Expect</small><h3 style="margin-top:6px">Honesty</h3><p>No guaranteed placements, no invented pay rates. If demand in your category is quiet, we'd rather tell you than sell you.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Our values</div><h2>The principles behind the studio.</h2></div>
+    <div class="values">
+      <div class="card"><div class="ic">🔍</div><h3>Honesty over hype</h3><p>We don't publish pay rates we can't verify, promise placements we can't control, or dress categories up as guaranteed jobs. The real terms for every role live on the partner platform, where they're binding.</p></div>
+      <div class="card"><div class="ic">🎯</div><h3>Expertise deserves respect</h3><p>Years of fluency, training and practice are what make AI better. We write about experts the way we'd want to be written about — as professionals, not applicants in a funnel.</p></div>
+      <div class="card"><div class="ic">🆓</div><h3>Free means free</h3><p>Legitimate AI expert platforms don't charge experts to apply. Neither do we — at any stage, for any reason. If anyone asks you to pay to "unlock" a job, walk away.</p></div>
+      <div class="card"><div class="ic">🔗</div><h3>One honest link</h3><p>Every Apply button on this site goes to the same place: our partner AI research platform. No detours, no harvesting your details, no fine print.</p></div>
+      <div class="card"><div class="ic">🧭</div><h3>Clarity is a service</h3><p>Most people don't need more options — they need the right option, explained well. Curation and plain language are real work, and we treat them that way.</p></div>
+      <div class="card"><div class="ic">🤝</div><h3>Both sides, fairly</h3><p>Experts and hiring teams both do better when expectations are honest on each side. We hold that line even when a vaguer promise would be easier to sell.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Why "JobCorner"?</div><h2>Everyone starts somewhere. Ours is the corner.</h2></div>
+    <div class="prose">
+      <p>A corner is where you pause, get your bearings, and choose a direction. That's exactly the moment we built this for: a skilled professional curious about AI work, deciding where to begin. We provide the map: the categories, the process, the honest caveats. Then you walk through the door yourself.</p>
+      <p>JobCorner AI is new, and we're building it the way we'd want it built for us — carefully, transparently, and one true claim at a time. As the studio grows, this page will grow with it, under the same rule it has today: <strong>if we can't verify it, we don't claim it.</strong></p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px"><a class="btn btn-teal" href="#opportunities">See the opportunities</a><a class="btn btn-outline" href="#contact">Talk to us</a></div>
+  </div></section>
+</div>
+
+<!-- ============================ OPPORTUNITIES ============================ -->
+<div class="page" data-page="opportunities">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">Opportunities</div>
+    <h1>Find your role in the AI economy.</h1>
+    <p>These are opportunity <strong style="color:#fff">categories</strong>, not individual postings. Click Apply on any card to see the exact live roles on our partner platform and apply there.</p>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="jobs-tools">
+      <div class="search">🔎 <input id="jobSearch" type="search" placeholder="Search categories — try “language”, “code”, “legal”…" aria-label="Search opportunity categories"/></div>
+    </div>
+    <div class="pills" role="group" aria-label="Filter categories" style="margin-bottom:18px">
+      <button class="pill active" data-filter="all">All categories</button>
+      <button class="pill" data-filter="language">Language</button>
+      <button class="pill" data-filter="coding">Coding &amp; STEM</button>
+      <button class="pill" data-filter="domain">Domain experts</button>
+      <button class="pill" data-filter="general">Generalists</button>
+    </div>
+
+    <div class="jobs-grid" id="jobsGrid">
+      <article class="job" data-cat="language" data-search="language linguistics translation native telugu hindi spanish french german arabic localization grammar">
+        <div class="job-top"><div class="job-icon">🗣️</div><span class="cat">Language</span></div>
+        <h3>Language &amp; Linguistics Experts</h3>
+        <p>Use native-level fluency to train and evaluate AI in your language — checking grammar, tone, translation quality and cultural nuance.</p>
+        <ul><li>Best for: native speakers, translators, language teachers, editors</li><li>Typical work: rating responses, fixing translations, voice &amp; text evaluation</li></ul>
+        <div class="meta"><span>Remote category</span><span>Contract</span><span>Many languages</span></div>
+        <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      </article>
+
+      <article class="job" data-cat="coding" data-search="coding stem software engineer developer python data science math physics engineering code review">
+        <div class="job-top"><div class="job-icon">💻</div><span class="cat">Coding &amp; STEM</span></div>
+        <h3>Coding &amp; STEM Experts</h3>
+        <p>Put technical depth to work: write and review code, solve hard STEM problems, and teach models to reason like an engineer.</p>
+        <ul><li>Best for: developers, data scientists, engineers, STEM researchers</li><li>Typical work: code evaluation, problem-solving, technical Q&amp;A</li></ul>
+        <div class="meta"><span>Remote category</span><span>Contract</span><span>Flexible hours</span></div>
+        <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      </article>
+
+      <article class="job" data-cat="domain" data-search="medical doctor nurse legal lawyer finance accounting domain expert healthcare law professional">
+        <div class="job-top"><div class="job-icon">🎓</div><span class="cat">Domain experts</span></div>
+        <h3>Medical, Legal &amp; Finance Experts</h3>
+        <p>Frontier AI needs real professional judgement. Lend yours — reviewing specialised answers where accuracy genuinely matters.</p>
+        <ul><li>Best for: clinicians, lawyers, accountants, finance &amp; other licensed professionals</li><li>Typical work: expert review, case reasoning, accuracy checks</li></ul>
+        <div class="meta"><span>Remote category</span><span>Contract</span><span>Credentials valued</span></div>
+        <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      </article>
+
+      <article class="job" data-cat="general" data-search="generalist ai training evaluation writing reasoning annotation quality rlhf beginner detail">
+        <div class="job-top"><div class="job-icon">✦</div><span class="cat">Generalists</span></div>
+        <h3>AI Training &amp; Evaluation Generalists</h3>
+        <p>The most accessible way in. Rate and compare AI responses, follow clear rubrics, and help models become more accurate and helpful.</p>
+        <ul><li>Best for: strong writers, detail-obsessed readers, career-switchers</li><li>Typical work: response rating, preference ranking, quality checks</li></ul>
+        <div class="meta"><span>Remote category</span><span>Contract</span><span>Great first step</span></div>
+        <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      </article>
+
+      <article class="job" data-cat="general" data-search="writing creative content editor copywriter research humanities history literature">
+        <div class="job-top"><div class="job-icon">✍️</div><span class="cat">Generalists</span></div>
+        <h3>Writing, Research &amp; Humanities Experts</h3>
+        <p>Writers and researchers shape how AI writes and reasons — drafting gold-standard answers and judging quality, style and facts.</p>
+        <ul><li>Best for: writers, editors, academics, researchers</li><li>Typical work: long-form evaluation, fact-checking, style judgement</li></ul>
+        <div class="meta"><span>Remote category</span><span>Contract</span><span>Portfolio helps</span></div>
+        <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      </article>
+
+      <article class="job" data-cat="coding" data-search="data annotation labeling analysis spreadsheet research operations qa quality assurance">
+        <div class="job-top"><div class="job-icon">◎</div><span class="cat">Coding &amp; STEM</span></div>
+        <h3>Data, Research &amp; QA Contributors</h3>
+        <p>Structured, careful work that makes datasets trustworthy — annotation, verification and analysis for teams building AI.</p>
+        <ul><li>Best for: analysts, QA specialists, research assistants</li><li>Typical work: data labelling, verification, structured review</li></ul>
+        <div class="meta"><span>Remote category</span><span>Contract</span><span>Detail-driven</span></div>
+        <a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a>
+      </article>
+    </div>
+    <div class="empty" id="jobsEmpty">No categories match that search. <button class="btn btn-outline btn-sm" id="resetJobs" style="margin-left:8px">Reset filters</button></div>
+
+    <div class="honest"><strong>Straight talk:</strong> Applying is always free. JobCorner AI is a referral guide — we don't hire, we don't collect applications, and we can't guarantee selection. Our hiring partner runs the interviews, assessments, matching, contracts and pay. Exact roles, requirements and rates are shown on the partner platform at the time you apply.</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Role matcher</div><h2>Not sure where you fit? Answer 3 questions.</h2></div>
+    <div class="split">
+      <div class="panel">
+        <h3>Find my category</h3>
+        <div class="quiz-q"><b>1 · What best describes your background?</b><div class="quiz-opts" data-q="bg">
+          <button data-v="language">Languages</button><button data-v="coding">Tech / STEM</button><button data-v="domain">A profession (med / law / finance…)</button><button data-v="general">General / other</button></div></div>
+        <div class="quiz-q"><b>2 · What work sounds most like you?</b><div class="quiz-opts" data-q="work">
+          <button data-v="language">Judging words &amp; translation</button><button data-v="coding">Solving &amp; building</button><button data-v="domain">Expert judgement calls</button><button data-v="general">Rating &amp; comparing answers</button></div></div>
+        <div class="quiz-q"><b>3 · Your strongest asset?</b><div class="quiz-opts" data-q="asset">
+          <button data-v="language">Native fluency</button><button data-v="coding">Technical depth</button><button data-v="domain">Credentials &amp; experience</button><button data-v="general">Sharp eye for detail</button></div></div>
+        <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+      </div>
+      <div class="panel">
+        <h3>Before you apply</h3>
+        <ul class="why-list">
+          <li><span class="ic">🧭</span><div><b>Know your category</b><p>Applying in the category that matches your real expertise gives the hiring partner's matching the clearest signal.</p></div></li>
+          <li><span class="ic">📄</span><div><b>Have your resume ready</b><p>An up-to-date resume and a LinkedIn profile help you complete your application profile in one sitting.</p></div></li>
+          <li><span class="ic">🎯</span><div><b>Be specific in the interview</b><p>Real examples of your expertise beat buzzwords in the AI interview and assessments.</p></div></li>
+          <li><span class="ic">🌐</span><div><b>Check role eligibility</b><p>Each live role states its own location and requirement details — check the role itself before applying.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<div class="page" data-page="how">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">How It Works</div>
+    <h1>From this page to your first project, step by step.</h1>
+    <p>No middleman holding your application, no hidden steps. Here is exactly what happens, in order.</p>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">For experts</div><h2>Three steps to apply.</h2><p>JobCorner AI never collects your resume or application. We point you to the right door — our hiring partner handles everything after that.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Pick your corner</h3><p>Browse the opportunity categories on the Opportunities page or use the role matcher there. Each category maps to real expert work, described in plain language.</p></div>
+      <div class="step"><div class="num">2</div><h3>Apply through our partner</h3><p>Every Apply button on this site opens our partner AI research platform in a new tab — the same single link everywhere. Create your profile there and complete the AI interview and any assessments for your category.</p></div>
+      <div class="step"><div class="num">3</div><h3>Get matched by the platform</h3><p>Our hiring partner reviews your profile and matches experts to live projects. Selection is made by the hiring partner and isn't guaranteed — strong, complete profiles with specific examples do best.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">After you click Apply</div><h2>What actually happens after you apply.</h2></div>
+    <div class="timeline">
+      <div class="tl"><small>Step 1</small><h3 style="margin-top:6px">Create your profile</h3><p>Sign up on the partner platform with your background, skills and the languages or domains you can expertly judge.</p></div>
+      <div class="tl"><small>Step 2</small><h3 style="margin-top:6px">AI interview &amp; checks</h3><p>Complete the platform's AI interview and any role assessments. Be specific — real examples beat buzzwords.</p></div>
+      <div class="tl"><small>Step 3</small><h3 style="margin-top:6px">Get matched</h3><p>If a project fits, our hiring partner reaches out with scope and terms. Matching depends on live project demand.</p></div>
+      <div class="tl"><small>Step 4</small><h3 style="margin-top:6px">Work &amp; get paid</h3><p>Contracts and payments are handled by our hiring partner directly. JobCorner AI is never in the payment chain.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Who does what</div><h2>Clear roles, no confusion.</h2></div>
+    <div class="compare">
+      <div class="col do"><h3>JobCorner AI — the studio</h3><ul>
+        <li><span class="mark mark-yes">✓</span><span>Curates and explains the opportunity categories for experts</span></li>
+        <li><span class="mark mark-yes">✓</span><span>Prepares experts for the platform process, free</span></li>
+        <li><span class="mark mark-yes">✓</span><span>Answers fit-and-category questions by email, free</span></li>
+        <li><span class="mark mark-yes">✓</span><span>Links experts directly to the partner platform — nothing in between</span></li>
+      </ul></div>
+      <div class="col"><h3>Our hiring partner — the platform</h3><ul>
+        <li><span class="mark mark-yes">✓</span><span>Hosts the live roles with real requirements and terms</span></li>
+        <li><span class="mark mark-yes">✓</span><span>Runs the AI interview, assessments and selection</span></li>
+        <li><span class="mark mark-yes">✓</span><span>Matches experts to projects and issues contracts</span></li>
+        <li><span class="mark mark-yes">✓</span><span>Pays experts directly for completed work</span></li>
+      </ul></div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Start step 1 — Apply now ↗</a><a class="btn btn-outline" href="#faq">Read the FAQ</a></div>
+  </div></section>
+</div>
+
+<!-- ============================ FOR EXPERTS ============================ -->
+<div class="page" data-page="experts">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">For Experts</div>
+    <h1>Your knowledge is the product now.</h1>
+    <p>AI models learn from human judgement. If you have deep skill in a language, a technology, or a profession, that judgement is exactly what expert platforms hire for.</p>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Why experts join</div><h2>Why start at JobCorner AI?</h2></div>
+    <div class="split">
+      <div class="panel"><ul class="why-list" style="margin-top:0">
+        <li><span class="ic">🧭</span><div><b>Clarity before you apply</b><p>Know which category fits, what the work actually involves, and what the application will ask for — before you spend an hour on a profile.</p></div></li>
         <li><span class="ic">🆓</span><div><b>No fees, no catches</b><p>Legitimate AI expert platforms don't charge experts to apply. If anyone asks you to pay to “unlock” a job, walk away.</p></div></li>
-        <li><span class="ic">🔗</span><div><b>One honest link</b><p>Every Apply button goes to the same place: Mercor. No forms here, no resume uploads here, no data collected here.</p></div></li>
-        <li><span class="ic">🌐</span><div><b>Built for experts everywhere</b><p>These categories value what you know — your language, your profession, your judgement. Each live Mercor role states its own location eligibility, so check the role before you apply.</p></div></li>
-      </ul>
+        <li><span class="ic">🔗</span><div><b>One honest link</b><p>Every Apply button goes to the same place: our partner AI research platform. No forms here, no resume uploads here, no data collected here.</p></div></li>
+      </ul></div>
+      <div class="panel"><ul class="why-list" style="margin-top:0">
+        <li><span class="ic">🌐</span><div><b>Built for experts everywhere</b><p>These categories value what you know — your language, your profession, your judgement. Each live role states its own location eligibility, so check the role before you apply.</p></div></li>
+        <li><span class="ic">🕐</span><div><b>Contract flexibility</b><p>The work is contract-based and remote, with the exact schedule and terms set by each live role.</p></div></li>
+        <li><span class="ic">🎯</span><div><b>Matched to your depth</b><p>Our hiring partner matches by expertise. The more specific your profile, the clearer the match.</p></div></li>
+      </ul></div>
     </div>
-  </div>
-</div></section>
+  </div></section>
 
-<!-- AFTER APPLY -->
-<section><div class="wrap">
-  <div class="sec-head"><div class="kicker">After you click Apply</div><h2>What actually happens on Mercor</h2></div>
-  <div class="timeline">
-    <div class="tl"><small>Step 1</small><h3 style="margin-top:6px">Create your profile</h3><p>Sign up on Mercor with your background, skills and the languages or domains you can expertly judge.</p></div>
-    <div class="tl"><small>Step 2</small><h3 style="margin-top:6px">AI interview &amp; checks</h3><p>Complete Mercor's interview and any role assessments. Be specific — real examples beat buzzwords.</p></div>
-    <div class="tl"><small>Step 3</small><h3 style="margin-top:6px">Get matched</h3><p>If a project fits, Mercor reaches out with scope and terms. Matching depends on live project demand.</p></div>
-    <div class="tl"><small>Step 4</small><h3 style="margin-top:6px">Work &amp; get paid by Mercor</h3><p>Contracts and payments are handled by Mercor directly. JobCorner AI is never in the payment chain.</p></div>
-  </div>
-</div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Who can apply</div><h2>Four kinds of expertise our partner hires.</h2><p>You don't need an AI background. You need a real skill that AI needs to learn from.</p></div>
+    <div class="cards2">
+      <div class="card"><div class="ic">🗣️</div><h3>Language experts</h3><p>Native or near-native fluency in any language, with a sharp ear for grammar, tone and cultural nuance. Translators, teachers, editors and linguists fit naturally.</p><a class="go link-arrow" href="#opportunities">See language roles →</a></div>
+      <div class="card"><div class="ic">💻</div><h3>Technical experts</h3><p>Software engineers, data scientists, mathematicians and STEM researchers who can write, review and debug at a professional level.</p><a class="go link-arrow" href="#opportunities">See coding &amp; STEM roles →</a></div>
+      <div class="card"><div class="ic">🎓</div><h3>Licensed professionals</h3><p>Clinicians, lawyers, accountants and finance professionals whose credentials and case experience let them judge specialised answers.</p><a class="go link-arrow" href="#opportunities">See domain-expert roles →</a></div>
+      <div class="card"><div class="ic">✦</div><h3>Sharp generalists</h3><p>Strong writers and detail-obsessed readers. Generalist evaluation is the most accessible entry point and needs no specialist credential.</p><a class="go link-arrow" href="#opportunities">See generalist roles →</a></div>
+    </div>
+  </div></section>
 
-<!-- FAQ -->
-<section id="faq"><div class="wrap faq">
-  <div class="sec-head"><div class="kicker">FAQ</div><h2>Questions, answered straight.</h2></div>
-  <details><summary>Is JobCorner AI the employer?</summary><p>No. JobCorner AI is an independent referral guide. All opportunities are on Mercor, which runs applications, interviews, selection, contracts and payment.</p></details>
-  <details><summary>Does it cost anything to apply?</summary><p>No — applying is free, and JobCorner AI charges experts nothing at any stage. Be cautious of anyone who asks for payment to access job applications.</p></details>
-  <details><summary>Am I guaranteed to get work?</summary><p>No, and any site promising that isn't being straight with you. Selection is by Mercor based on your profile, assessments and live project demand.</p></details>
-  <details><summary>Why don't the cards show pay rates?</summary><p>Rates depend on the exact live role, your expertise and location, and they change. Mercor shows the real terms for each role when you apply — we'd rather send you to the true number than publish one that might not apply to you.</p></details>
-  <details><summary>What do I need to apply on Mercor?</summary><p>Typically a profile describing your expertise, plus Mercor's AI interview and any assessments for the role. A LinkedIn profile and an up-to-date resume help you move faster.</p></details>
-  <details><summary>Can I apply from outside Canada?</summary><p>These categories are remote and Mercor works with experts globally, though eligibility for a specific role is set by Mercor and shown on the role itself.</p></details>
-</div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Strong applications</div><h2>What a strong application profile looks like.</h2></div>
+    <div class="steps">
+      <div class="step"><div class="num">✓</div><h3>Specific, not generic</h3><p>Name the languages, tools, domains and years behind your expertise. "Native Telugu speaker, 6 years translating technical documents" beats "good communicator" every time.</p></div>
+      <div class="step"><div class="num">✓</div><h3>Complete, in one sitting</h3><p>Finish the profile, the AI interview and any assessments without leaving gaps. Incomplete profiles give matching nothing to work with.</p></div>
+      <div class="step"><div class="num">✓</div><h3>Backed by evidence</h3><p>An up-to-date resume and a LinkedIn profile that agree with each other. Credentials and portfolios matter most in the domain-expert categories.</p></div>
+    </div>
+    <div class="honest"><strong>Honest note:</strong> We can help you prepare, but we can't influence selection. Selection is made by the hiring partner, based on your profile, your assessments and live project demand — and demand changes, so a category that's quiet today may open up later.</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a><a class="btn btn-outline" href="#opportunities">Take the role matcher</a></div>
+  </div></section>
+</div>
 
-<!-- CTA / CONTACT -->
-<div class="wrap" id="contact"><div class="cta">
-  <div><div class="kicker" style="color:#5EEAD4">Your corner is waiting</div><h2>One click takes you to the real applications.</h2><p>Browse the categories, pick your best fit, and apply on Mercor. It costs nothing to try — and your expertise might be exactly what the next model needs.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply on Mercor ↗</a><a class="btn" href="#opportunities" style="background:transparent;color:#fff;border-color:#3B548F">Browse categories</a></div></div>
-  <div class="cta-card"><h3 style="color:#fff">Talk to JobCorner AI</h3><p style="margin:8px 0 14px">Questions about which category fits you? Email us — guidance is free, and we'll point you to the right Mercor path.</p>
-    <p style="margin:0 0 8px">✉️ <a href="mailto:info@jobcornerai.com">info@jobcornerai.com</a></p>
-    <p style="margin:0 0 14px">✉️ <a href="mailto:jobcornerai@gmail.com">jobcornerai@gmail.com</a></p>
-    <button class="btn btn-teal btn-sm" id="copyEmail">Copy info@jobcornerai.com</button>
-  </div>
-</div></div>
+<!--
+     PARKED: FOR COMPANIES CONSULTANCY PAGE (future plan).
+     Not live: this entire block sits inside one HTML comment,
+     absent from the nav and the page router, and linked from nowhere.
+     TO SWITCH ON LATER: remove the comment wrapper lines
+     around the page block below, re-add
+     "companies" to PAGES and TITLES in the script, and re-add
+     the For Companies links to the header nav and footer.
+     PARKED PAGE CODE begins below this note:
+<div class="page" data-page="companies">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">For Companies</div>
+    <h1>Expert talent for teams building AI.</h1>
+    <p>Your model is only as good as the human judgement behind it. JobCorner AI works as a talent consultancy for companies that need vetted domain experts — for AI training, evaluation and quality review.</p>
+    <a class="btn btn-teal" href="mailto:info@jobcornerai.com?subject=Expert%20talent%20enquiry%20—%20JobCorner%20AI">Talk to us — info@jobcornerai.com</a>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">The challenge</div><h2>Great AI needs great judges — and they're hard to hire.</h2><p>Training and evaluating a serious AI product takes people who are rare on ordinary job boards: native-level linguists across many languages, senior engineers who can grade code, clinicians and lawyers who can judge specialised answers safely. Finding them is only half the problem — screening them against a real quality bar, and organising them into a reliable panel, is the other half. That's the work we do.</p></div>
+    <div class="cards3">
+      <div class="card"><div class="ic">🗣️</div><h3>Language &amp; linguistics</h3><p>Native-level experts for multilingual training data, translation quality, tone and cultural evaluation.</p></div>
+      <div class="card"><div class="ic">💻</div><h3>Coding &amp; STEM</h3><p>Engineers and researchers for code generation review, problem-solving benchmarks and technical Q&amp;A evaluation.</p></div>
+      <div class="card"><div class="ic">🎓</div><h3>Licensed professionals</h3><p>Medical, legal and finance experts for high-stakes review where accuracy and safety genuinely matter.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">What we can help with</div><h2>Consultancy services for expert hiring.</h2></div>
+    <div class="cards3">
+      <div class="card"><div class="ic">🔎</div><h3>Expert sourcing</h3><p>We identify and reach the expert profiles your project needs — across languages, technical disciplines and licensed professions — and bring qualified candidates to the table.</p><ul><li>Profile definition before we search</li><li>Outreach across expert communities</li><li>Candidates matched to your domain and quality bar</li></ul></div>
+      <div class="card"><div class="ic">✅</div><h3>Screening &amp; vetting support</h3><p>Finding experts is easy; knowing they're excellent is the hard part. We support structured screening so the people who reach your project have proven judgement, not just a good resume.</p><ul><li>Credential and experience checks</li><li>Work-sample and assessment design support</li><li>Calibration against your quality standards</li></ul></div>
+      <div class="card"><div class="ic">👥</div><h3>Expert panels &amp; teams</h3><p>For training and evaluation projects, we help assemble balanced panels — the right mix of domains, languages and seniority — structured to deliver consistent, reliable judgement at the scale your project needs.</p><ul><li>Panel composition and coverage planning</li><li>Redundancy for quality control</li><li>Structure for ongoing evaluation work</li></ul></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">How engaging us works</div><h2>Four steps, starting with a conversation.</h2></div>
+    <div class="timeline">
+      <div class="tl"><small>Step 1</small><h3 style="margin-top:6px">Discovery call</h3><p>We learn your product, the kind of judgement your project needs, your quality bar and your timelines. No obligation — the first conversation is about understanding, not selling.</p></div>
+      <div class="tl"><small>Step 2</small><h3 style="margin-top:6px">Talent plan</h3><p>We come back with a concrete plan: the expert profiles to target, how they'll be screened, and how a panel would be structured for your project.</p></div>
+      <div class="tl"><small>Step 3</small><h3 style="margin-top:6px">Introductions</h3><p>You're introduced to suitable expert talent matched to the plan, and working arrangements are set directly with clear expectations on both sides.</p></div>
+      <div class="tl"><small>Step 4</small><h3 style="margin-top:6px">Ongoing support</h3><p>As the work runs, we stay available — helping with panel adjustments, additional expertise, and quality questions as your project evolves.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div class="kicker">Why JobCorner AI</div><h2>A consultancy that lives in this market daily.</h2></div>
+    <div class="split">
+      <div class="panel"><ul class="why-list" style="margin-top:0">
+        <li><span class="ic">🎯</span><div><b>Focused on expert talent for AI</b><p>This is our whole business — not a side desk at a generalist agency. We speak the language of training data, evaluation rubrics and expert judgement.</p></div></li>
+        <li><span class="ic">🧭</span><div><b>We see both sides</b><p>We guide experts every day, so we understand what motivates them, what strong profiles look like, and how to set expectations that hold up in real project work.</p></div></li>
+      </ul></div>
+      <div class="panel"><ul class="why-list" style="margin-top:0">
+        <li><span class="ic">🔍</span><div><b>Honest about fit</b><p>If we can't help with a profile or a timeline, we'll tell you in the discovery call rather than after a contract. Straight answers are our whole reputation.</p></div></li>
+        <li><span class="ic">⚡</span><div><b>Lightweight to engage</b><p>No retainers to decode or platforms to adopt. An email starts the conversation, and the talent plan tells you exactly what working with us would look like.</p></div></li>
+      </ul></div>
+    </div>
+    <div class="honest"><strong>Straight talk for companies:</strong> JobCorner AI is a new consultancy, and we'd rather earn your trust than borrow it — so you won't find client logos, case studies or placement numbers on this page, because we won't publish claims we can't stand behind. What we offer is a focused service, a clear process, and a first conversation that costs you nothing but time.</div>
+  </div></section>
+
+  <div class="wrap"><div class="cta">
+    <div><div class="kicker" style="color:#5EEAD4">Start the conversation</div><h2>Tell us what you're building.</h2><p>Share your product, the expertise you're missing, and your timeline. We'll reply with honest first thoughts on how an expert panel could work for your project — and whether we're the right studio to build it.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><a class="btn btn-teal" href="mailto:info@jobcornerai.com?subject=Expert%20talent%20enquiry%20—%20JobCorner%20AI">Email info@jobcornerai.com</a><a class="btn" href="#contact" style="background:transparent;color:#fff;border-color:#3B548F">Contact page</a></div></div>
+    <div class="cta-card"><h3 style="color:#fff">What to include</h3><p style="margin:8px 0 0">Your company and product · the expert domains or languages you need · project scale and timeline · any quality or credential requirements. The more specific the brief, the more useful our reply.</p></div>
+  </div></div>
+</div>
+
+-->
+
+<!-- ============================ FAQ ============================ -->
+<div class="page" data-page="faq">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">FAQ</div>
+    <h1>Questions, answered straight.</h1>
+    <p>Everything experts usually ask — including the parts most sites would rather skip.</p>
+  </div></div>
+
+  <section class="block"><div class="wrap faq">
+    <h3 class="faq-group" style="margin-top:0">About JobCorner AI</h3>
+    <details><summary>Is JobCorner AI the employer?</summary><p>No. For expert opportunities, JobCorner AI is an independent referral guide. All opportunities are delivered through our partner AI research platform, which runs applications, interviews, selection, contracts and payment.</p></details>
+    <details><summary>How does JobCorner AI fit into the process?</summary><p>We curate the opportunity categories, explain them in plain language, prepare you for each step, and link you directly to our partner AI research platform to apply. See the About page for the full picture.</p></details>
+    <details><summary>Does it cost anything to apply?</summary><p>No — applying is free, and JobCorner AI charges experts nothing at any stage. Be cautious of anyone who asks for payment to access job applications.</p></details>
+
+    <h3 class="faq-group">Applying</h3>
+    <details><summary>What do I need to apply?</summary><p>Typically a profile describing your expertise, plus an AI interview and any assessments for the role. A LinkedIn profile and an up-to-date resume help you move faster.</p></details>
+    <details><summary>Am I guaranteed to get work?</summary><p>No, and any site promising that isn't being straight with you. Selection is made by the hiring partner, based on your profile, assessments and live project demand.</p></details>
+    <details><summary>Can I apply from outside Canada?</summary><p>These categories are remote and Our partner platform works with experts globally, though eligibility for a specific role is set by the hiring partner and shown on the role itself.</p></details>
+    <details><summary>Can I apply to more than one category?</summary><p>Your profile on the partner platform covers your full background. Start with the category that matches your strongest expertise — the role matcher on the Opportunities page helps you pick — and make sure your profile reflects everything you can expertly judge.</p></details>
+
+    <h3 class="faq-group">Pay &amp; terms</h3>
+    <details><summary>Why don't the cards show pay rates?</summary><p>Rates depend on the exact live role, your expertise and location, and they change. Our partner platform shows the real terms for each role when you apply — we'd rather send you to the true number than publish one that might not apply to you.</p></details>
+    <details><summary>Who pays me, and how?</summary><p>Our hiring partner does, directly, under the contract terms of the role you accept. JobCorner AI never handles your pay and takes nothing from it.</p></details>
+    <details><summary>Is this full-time employment?</summary><p>No — these are remote contract opportunities. The exact hours, duration and terms are set by each live role, so read the role carefully before accepting.</p></details>
+
+    <div class="honest" style="margin-top:22px"><strong>Still unsure?</strong> Email us at <a href="mailto:info@jobcornerai.com" style="font-weight:700">info@jobcornerai.com</a> and ask — guidance for experts is free. Or head to the <a href="#contact" style="font-weight:700">Contact page</a> for what to include in your message.</div>
+  </div></section>
+</div>
+
+<!-- ============================ CONTACT ============================ -->
+<div class="page" data-page="contact">
+  <div class="page-head"><div class="wrap page-head-in">
+    <div class="crumb">Contact</div>
+    <h1>Talk to JobCorner AI.</h1>
+    <p>Questions about which category fits you, how the application process works, or something you read on this site? Email us — guidance is free.</p>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Email us</h3>
+        <p>Our inbox is the fastest way to reach us. We read every message ourselves.</p>
+        <div class="email-row"><span aria-hidden="true">✉️</span><a href="mailto:info@jobcornerai.com">info@jobcornerai.com</a><button class="btn btn-teal btn-sm" id="copyEmail" style="margin-left:auto">Copy email</button></div>
+        <div class="email-row"><span aria-hidden="true">✉️</span><a href="mailto:jobcornerai@gmail.com">jobcornerai@gmail.com</a><span style="color:var(--muted);font-size:.85rem">Backup inbox</span></div>
+        <p style="margin-top:16px"><strong style="color:var(--ink)">Experts:</strong> tell us your background or profession, the languages you speak natively (if relevant), and which category you're considering.</p>
+        <p><strong style="color:var(--ink)">Tip:</strong> the more specific your message — your field, your languages, your years of experience — the more useful our reply can be.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Good reasons to write</h3>
+        <ul class="topic-list">
+          <li>You're not sure which opportunity category fits your background</li>
+          <li>You want to understand the application process before applying</li>
+          <li>You would like to suggest a category we should cover</li>
+          <li>Something on this site is unclear or looks wrong</li>
+        </ul>
+        <h3 style="margin-top:22px">Please note</h3>
+        <p>We can't review resumes, submit applications on your behalf, check your application status, or influence selection — those all live with our hiring partner. For anything about an application you have already submitted, contact the partner platform through your account there.</p>
+      </div>
+    </div>
+
+    <div class="cta" style="margin-bottom:8px">
+      <div><div class="kicker" style="color:#5EEAD4">Ready when you are</div><h2>Know your category? Skip the email.</h2><p>If you already know where you fit, the fastest next step is the application itself — it costs nothing to try.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><a class="btn btn-teal" data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a><a class="btn" href="#opportunities" style="background:transparent;color:#fff;border-color:#3B548F">Browse categories</a></div></div>
+      <div class="cta-card"><h3 style="color:#fff">Not sure yet?</h3><p style="margin:8px 0 14px">The 3-question role matcher on the Opportunities page gives you a best-fit category in under a minute.</p><a href="#opportunities">Take the role matcher →</a></div>
+    </div>
+  </div></section>
+</div>
+
 </main>
 
 <footer><div class="wrap foot-grid">
-  <div style="max-width:520px"><a class="logo" href="#top" style="margin-bottom:10px"><svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="width:36px;height:36px"><rect width="48" height="48" rx="12" fill="#0B1530"/><path d="M14 34V14h9" stroke="#0EA68C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 14h-8M34 34h-8" stroke="#FFB020" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="24" r="3.2" fill="#fff"/></svg><span>JobCorner <em>AI</em></span></a>
-  <p>JobCorner AI · jobcornerai.com — an independent guide to AI expert contract opportunities. Not affiliated with or endorsed by Mercor; all applications, hiring decisions, contracts and payments are Mercor's.</p></div>
-  <div><b style="color:var(--ink)">Explore</b><br><a href="#opportunities">Opportunities</a><br><a href="#how">How it works</a><br><a href="#faq">FAQ</a></div>
-  <div><b style="color:var(--ink)">Apply</b><br><a data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Mercor — apply ↗</a><br><a href="mailto:info@jobcornerai.com">info@jobcornerai.com</a></div>
+  <div style="max-width:520px"><a class="logo" href="#home" data-nav="home" style="margin-bottom:10px"><svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="width:36px;height:36px"><rect width="48" height="48" rx="12" fill="#0B1530"/><path d="M14 34V14h9" stroke="#0EA68C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 14h-8M34 34h-8" stroke="#FFB020" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="24" r="3.2" fill="#fff"/></svg><span>JobCorner <em>AI</em></span></a>
+  <p>JobCorner AI · jobcornerai.com — an independent guide to AI expert contract opportunities, delivered through our partner AI research platform. JobCorner AI is a referral studio: applications, hiring decisions, contracts and payments are handled by our hiring partner.</p></div>
+  <div class="foot-col"><b>Company</b><a href="#about" data-nav="about">About Us</a><a href="#how" data-nav="how">How It Works</a><a href="#contact" data-nav="contact">Contact</a></div>
+  <div class="foot-col"><b>Explore</b><a href="#opportunities" data-nav="opportunities">Opportunities</a><a href="#experts" data-nav="experts">For Experts</a><a href="#faq" data-nav="faq">FAQ</a><a data-apply href="https://www.mercor.com" target="_blank" rel="noopener">Apply now ↗</a><a href="mailto:info@jobcornerai.com">info@jobcornerai.com</a></div>
 </div></footer>
 <div class="toast" id="toast" role="status">Copied ✓</div>
 
 <script>
 /* ============================================================
    ★ OWNER: SWAP THE APPLY LINK HERE — ONE PLACE ONLY ★
-   Replace the URL below with your personal Mercor referral
+   Replace the URL below with your personal referral
    link when it unlocks. Every Apply button on this page
-   (header, all 6 category cards, CTA, footer) uses it.
+   (header, all 6 category cards, CTAs, footer) uses it.
    ============================================================ */
-var MERCOR_APPLY_URL = "https://www.mercor.com";
+var APPLY_URL = "https://www.mercor.com";
 
-document.querySelectorAll("[data-apply]").forEach(function(a){ a.href = MERCOR_APPLY_URL; });
+document.querySelectorAll("[data-apply]").forEach(function(a){ a.href = APPLY_URL; });
 
 var CATS = {
-  language:{name:"Language & Linguistics Experts", desc:"Your fluency is your edge. Start with language evaluation roles on Mercor."},
-  coding:{name:"Coding & STEM Experts", desc:"Your technical depth fits code and STEM evaluation roles on Mercor."},
-  domain:{name:"Medical, Legal & Finance Experts", desc:"Your professional judgement fits domain-expert review roles on Mercor."},
+  language:{name:"Language & Linguistics Experts", desc:"Your fluency is your edge. Start with language evaluation roles through our partner platform."},
+  coding:{name:"Coding & STEM Experts", desc:"Your technical depth fits code and STEM evaluation roles through our partner platform."},
+  domain:{name:"Medical, Legal & Finance Experts", desc:"Your professional judgement fits domain-expert review roles through our partner platform."},
   general:{name:"AI Training & Evaluation Generalists", desc:"Your eye for quality fits generalist evaluation roles — the most accessible way in."}
 };
-function applyBtn(){ return '<a class="btn btn-teal btn-sm" href="'+MERCOR_APPLY_URL+'" target="_blank" rel="noopener">Apply on Mercor ↗</a>'; }
+function applyBtn(){ return '<a class="btn btn-teal btn-sm" href="'+APPLY_URL+'" target="_blank" rel="noopener">Apply now ↗</a>'; }
+
+/* ---------- Page router ---------- */
+var PAGES = ["home","about","opportunities","how","experts","faq","contact"];
+var TITLES = {
+  home:"JobCorner AI — Your corner for AI expert work",
+  about:"About Us — JobCorner AI",
+  opportunities:"Opportunities — JobCorner AI",
+  how:"How It Works — JobCorner AI",
+  experts:"For Experts — JobCorner AI",
+  faq:"FAQ — JobCorner AI",
+  contact:"Contact — JobCorner AI"
+};
+var pageEls = {};
+document.querySelectorAll(".page").forEach(function(p){ pageEls[p.dataset.page]=p; });
+var menuBtn=document.getElementById("menuBtn"), mobileMenu=document.getElementById("mobileMenu");
+function closeMenu(){ mobileMenu.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.textContent="☰"; }
+menuBtn.addEventListener("click",function(){
+  var open=mobileMenu.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open?"true":"false");
+  menuBtn.textContent= open?"✕":"☰";
+});
+function currentPage(){
+  var h=(location.hash||"").replace("#","").replace("/","");
+  if(h==="top"||h==="") return "home";
+  return PAGES.indexOf(h)>=0 ? h : "home";
+}
+function renderPage(){
+  var cur=currentPage();
+  PAGES.forEach(function(name){ if(pageEls[name]) pageEls[name].classList.toggle("active", name===cur); });
+  document.querySelectorAll("[data-nav]").forEach(function(a){ a.classList.toggle("active", a.dataset.nav===cur); });
+  document.title=TITLES[cur];
+  closeMenu();
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",renderPage);
+renderPage();
 
 /* Hero finder */
 var sel=document.getElementById("skillSel"), fr=document.getElementById("finderResult");
@@ -391,7 +859,7 @@ document.querySelectorAll(".quiz-opts").forEach(function(group){
       if(Object.keys(answers).length===3){
         var tally={language:0,coding:0,domain:0,general:0}; Object.values(answers).forEach(function(v){tally[v]++});
         var best=Object.keys(tally).sort(function(a,b){return tally[b]-tally[a]})[0], c=CATS[best];
-        qr.innerHTML="<strong>Your match: "+c.name+"</strong><p style='color:var(--muted);margin:6px 0 12px'>"+c.desc+" Selection is by Mercor and isn't guaranteed — but this is the strongest place to start.</p>"+applyBtn();
+        qr.innerHTML="<strong>Your match: "+c.name+"</strong><p style='color:var(--muted);margin:6px 0 12px'>"+c.desc+" Selection is made by the hiring partner and isn't guaranteed — but this is the strongest place to start.</p>"+applyBtn();
         qr.classList.add("show");
       }
     });
